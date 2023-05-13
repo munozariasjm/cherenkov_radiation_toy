@@ -1,4 +1,7 @@
 # Cherenkov Radiation
+---
+
+A toy model of Cherenkov Radiation using Python and Matplotlib. It was made for illustration of the electrodynamical physics involved only, and is not meant to be a rigorous simulation of Cherenkov Radiation.
 
 ## Introduction
 
@@ -8,4 +11,16 @@ The characteristic blue glow of underwater nuclear reactors is due to Cherenkov 
 
 ## Theory
 
-Please see the explanation notebook with the thory behind the code here: [Theory](
+Please see the explanation notebook with the thory behind the code here: [Theory](/notebooks/01_theory.ipynb)
+
+## Code
+
+To run the code, please install this package using pip:
+
+```bash
+pip install cherenkov-radiation
+```
+
+Then, you can run the code using the correct kernel in the other notebooks.
+
+
