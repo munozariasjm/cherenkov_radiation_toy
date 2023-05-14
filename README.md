@@ -18,9 +18,13 @@ Please see the explanation notebook with the thory behind the code here: [Theory
 To run the code, please install this package using pip:
 
 ```bash
-pip install cherenkov-radiation
+git clone https://github.com/munozariasjm/cherenkov_radiation_toy.git
+cd cherenkov_radiation_toy
+pip install .
 ```
 
 Then, you can run the code using the correct kernel in the other notebooks.
 
+## Author
 
+- [Jose M Munoz Arias](https://github.com/munozariasjm)
