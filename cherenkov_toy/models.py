@@ -7,9 +7,7 @@ from .schemas import Particle, Medium, alpha, c, z
 import matplotlib
 from matplotlib import rc
 import matplotlib.pylab as plt
-
-from matplotlib import rc
-import matplotlib.pylab as plt
+import numba as nb
 
 try:
     rc("font", **{"family": "serif", "serif": ["Computer Modern"], "size": 18})
@@ -116,7 +114,7 @@ class CherenkovMontecarlo:
         """Get the energy per length for a given frequency."""
         return np.array(
             [
-                cherenkov.frank_tamm_dx(min_omega, max_omega)
-                for cherenkov in self.cherenkovs
+                self.cherenkovs[i].frank_tamm_dx(min_omega, max_omega)
+                for i in nb.prange(len(self.cherenkovs))
             ]
         )
