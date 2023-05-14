@@ -3,7 +3,14 @@ from scipy.constants import fine_structure, speed_of_light, elementary_charge
 import matplotlib.pyplot as plt
 from typing import List, Union, Callable
 from scipy import integrate
-
+import matplotlib
+from matplotlib import rc
+import matplotlib.pylab as plt
+try:
+    rc('font', **{'family': 'serif', 'serif': ['Computer Modern'], "size":18})
+    rc('text', usetex=True)
+except Exception as e:
+    print(e)
 
 # Define constants
 alpha = fine_structure
@@ -18,6 +25,10 @@ class Particle:
         self.v = speed
         self.gamma = 1 / np.sqrt(1 - self.v**2 / c**2)
         self.beta = self.v / c
+
+    def get_speed(self) -> float:
+        """Get the speed of the particle"""
+        return self.v
 
 class Medium:
     """Class for a medium with refractive index and permeability"""
